@@ -18,13 +18,14 @@ app.use(express.static(__dirname + '/build'))
 //     res.sendFile(__dirname + '/build/index.html')
 // })
 
-// app.get('/', (req, res, next) => {
-//   res.send("Hello form server..")
-// })
-
-app.get('/:room', (req, res, next) => {
+app.get('/', (req, res, next) => {
   res.sendFile(__dirname + '/build/index.html')
+
 })
+
+// app.get('/:room', (req, res, next) => {
+//   res.sendFile(__dirname + '/build/index.html')
+// })
 
 const server = app.listen(port, () => console.log(`Server listening on port ${port}!`))
 

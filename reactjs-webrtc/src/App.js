@@ -39,7 +39,6 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    // 'http://10.10.0.96:4001/webrtcPeer',
 
     
     this.socket = io.connect(
@@ -47,7 +46,7 @@ class App extends Component {
       {
         path: '/io/webrtc',
         query: {
-          room: window.location.pathname,
+          room: "test",
         }
       }
     )
